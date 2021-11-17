@@ -22,3 +22,11 @@ puts
 puts "Matrix multiplication"
 newMatrix = multiplyMatrix(matrixA, matrixB)
 printMatrix(newMatrix)
+
+
+def printMatrix(matrix)
+  for array in matrix
+    array.select{|x| print x.to_s.rjust(4." ")}
+    puts
+  end
+end
