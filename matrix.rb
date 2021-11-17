@@ -45,6 +45,16 @@ def multiplyMatrix(matrix1,matrix2)
   return multipliedMatrix
 end
 
+def transposeMatrix(matrix1)
+    transposedMatrix=Array.new(matrix1[0].length){Array.new(matrix1.length){0}}
+
+    for i in 0..matrix1.length-1
+      for j in 0..matrix1[0].length-1
+        transposedMatrix[j][i]= matrix1[i][j]
+      end
+    end
+  return transposedMatrix
+end
 
 puts "MatrixA: "
 printMatrix(matrixA)
