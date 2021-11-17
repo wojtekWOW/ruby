@@ -32,6 +32,20 @@ def sumMatrix(matrix1, matrix2)
   return matrixC
 end
 
+def multiplyMatrix(matrix1,matrix2)
+  multipliedMatrix = Array.new(matrix1.length){Array.new(matrix2[0].length){0}}
+
+  for i in 0..multipliedMatrix.length-1
+    for j in 0..multipliedMatrix[0].length-1
+      for k in 0..matrix1[0].length-1
+        multipliedMatrix[i][j]+=matrix1[i][k]*matrix2[k][j]
+      end
+    end
+  end
+  return multipliedMatrix
+end
+
+
 puts "MatrixA: "
 printMatrix(matrixA)
 
