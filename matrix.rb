@@ -5,8 +5,8 @@ matrixA =[
 
 matrixB =[
   [7, 8],
-  [9,10],
-  [11,12]
+  [9, 10],
+  [11, 12]
 ]
 
 def printMatrix(matrix)
@@ -15,6 +15,8 @@ def printMatrix(matrix)
     puts
   end
 end
+
+
 
 puts "MatrixA: "
 printMatrix(matrixA)
@@ -26,6 +28,17 @@ printMatrix(matrixB)
 
 puts
 
+puts "Matrix sum"
+matrixSum = sumMatrix(matrixA, matrixB)
+printMatrix(matrixSum)
+
+puts
+
 puts "Matrix multiplication"
-newMatrix = multiplyMatrix(matrixA, matrixB)
-printMatrix(newMatrix)
+matrixMultiplied = multiplyMatrix(matrixA, matrixB)
+printMatrix(matrixMultiplied)
+puts
+
+puts "Matrix transposition"
+matrixTransposed = transposeMatrix(matrixA)
+printMatrix(matrixTransposed)
