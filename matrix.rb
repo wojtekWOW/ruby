@@ -33,14 +33,19 @@ def sumMatrix(matrix1, matrix2)
 end
 
 def multiplyMatrix(matrix1,matrix2)
-  multipliedMatrix = Array.new(matrix1.length){Array.new(matrix2[0].length){0}}
+  if matrix1.length==matrix2[0].length && matrix1[0].length==matrix2.length
+    multipliedMatrix = Array.new(matrix1.length){Array.new(matrix2[0].length){0}}
 
-  for i in 0..multipliedMatrix.length-1
-    for j in 0..multipliedMatrix[0].length-1
-      for k in 0..matrix1[0].length-1
-        multipliedMatrix[i][j]+=matrix1[i][k]*matrix2[k][j]
+    for i in 0..multipliedMatrix.length-1
+      for j in 0..multipliedMatrix[0].length-1
+        for k in 0..matrix1[0].length-1
+          multipliedMatrix[i][j]+=matrix1[i][k]*matrix2[k][j]
+        end
       end
     end
+  else
+    puts "You can multiply only matrixes if matrix1 has the same number of rows as matrix2 has columns and matrix1 has the same number of columns as matrix2 has rows"
+    multipliedMatrix=[]
   end
   return multipliedMatrix
 end
